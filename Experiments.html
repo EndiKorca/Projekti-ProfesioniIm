@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn1").click(function(){
+    $("#p1").append(" <b>Appended text</b>.");
+  });
+
+  $("#btn2").click(function(){
+    $("ol").append("<li>Appended item</li>");
+  });
+});
+</script>
+<!--Fade jquery function-->
+<script>
+$(document).ready(function(){
+  $("#animation").click(function(){
+    $("#kuqe").fadeToggle();
+    $("#gjelber").fadeToggle("slow");
+    $("#kalter").fadeToggle(3000);
+  });
+});
+</script>
+<!--Hide / show jquery function-->
+<script>
+  $(document).ready(function(){
+  $(".btn1").click(function(){
+      $("#h1").hide();
+  });
+  $(".btn2").click(function(){
+      $("#h1").show();
+  });
+  });
+  </script>
+<link rel="stylesheet" href="experiments.css">
+<style>
+  div.ex2 {
+      margin: 10px;
+      border: 1px solid black;
+      background-color: rgb(126, 187, 129);
+      outline: 5px dashed blue;
+      outline-offset: 5px;
+      resize: vertical; overflow: auto;
+      margin-top: 30px;
+    } 
+   
+   </style>
+   <!--Animate jquery-->
+   <script> 
+    $(document).ready(function(){
+      $("#animate").click(function(){
+        var div = $("#d1");  
+        div.animate({left: '100px'}, "slow");
+        div.animate({fontSize: '3em'}, "slow");
+      });
+    });
+    </script> 
+    <!--Jquery callback function-->
+    <script>
+      $(document).ready(function(){
+        $("#callback_hide").click(function(){
+          $("#div_endi").hide("slow", function(){
+            alert("The paragraph is now hidden");
+          });
+        });
+      });
+      </script>
+</head>
+<html>
+  <body>
+    
+    <button id="animate">Start Animation</button><br><br>
+    <div id="d1" style="background:#3fa1f1;height:60px;width:170px;position:absolute;">Contact</div>
+    <br><br><br><br>
+<header>
+
+
+<p> ToString Method</p>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+<!--to string method-->
+<script>
+  function myFunction() {
+    var str = "Be safe!";
+    var res = str.toString();
+    document.getElementById("demo").innerHTML = res;
+  }
+  </script>
+
+<p id="p1">This is a paragraph.</p>
+
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+</ol>
+
+<button id="btn1">Append text</button>
+<button id="btn2">Append list items</button>
+
+<div class="ex2">
+
+    <p>Click the button to do a case-insensitive search for "job" in a string.</p>
+
+<button onclick="myFunction2()">Click</button>
+
+<p id="cov"></p>
+<!--match jquery-->
+<script>
+function myFunction2() {
+  var str = "Go find a job.";
+  var patt1 = /job/i;
+  var result = str.match(patt1);
+  document.getElementById("cov").innerHTML = result;
+}
+</script>
+
+  </div>
+<script>
+    function myFunction() {
+      var str = "Be ready!";
+      var res = str.toString();
+      document.getElementById("demo").innerHTML = res;
+    }
+    </script>
+
+
+
+  </header>
+  
+    <p>Click the button to do a global search for "intern" in a string.</p>
+
+    <button onclick="myFunction1()">Try it</button>
+    
+    <p id="demo11"></p>
+    
+    <script>
+    function myFunction1() {
+      var str = "developer-intern.";
+      var patt1 = /intern/g;
+      var result = str.match(patt1);
+      document.getElementById("demo11").innerHTML = result;
+    }
+    </script>
+
+      <br><br>
+   
+
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <!--remove jquery function-->
+<script>
+$(document).ready(function(){
+  $("#b5").click(function(){
+    $("#div1").remove();
+  });
+});
+</script>
+
+<p>Click the button to display the exponential notation of a specified number.</p>
+
+<button onclick="myFunction3()">Try it</button>
+
+<p id="demo12"></p>
+<!--to exponential method-->
+<script>
+function myFunction3() {
+  var num = 3.34567;
+  var n = num.toExponential();
+  document.getElementById("demo12").innerHTML = n;
+}
+</script>
+
+<br>
+<h1 id="h1" style="text-align: center; margin-top: 2px"; >Ushtrimet ne lenden Interneti</h1>
+<button class="btn1" style="width: 65px; height: 30px; margin-left: 5px;">Hide</button>
+<button class="btn2" style="width: 65px; height: 30px; margin-left: 5px;">Show</button>
+<br><br>
+
+<div id="div1" style="height:100px;width:300px;border:1px solid black;background-color:rgb(60, 151, 236);">
+
+Teksti brenda elementit div
+<p>Paragrafi brenda elementit div</p>
+<p>Nje tjeter paragraf brenda elementit div</p>
+
+</div>
+<br>
+
+<button id="b5">Remove div element</button>
+<br>
+<br>
+<div style="display: inline-block; display: inline-flex; margin-left: 20px;">
+  <button id="animation" style="width: 300px; margin-top: 1px;">Click to fade in/out boxes</button><br>
+  <div id="kuqe" style="width:30px;height:30px;background-color:red;"></div>
+  <br>
+  <div id="gjelber" style="width:30px;height:30px;background-color:green;"></div>
+  <br>
+  <div id="kalter" style="width:30px;height:30px;background-color:blue;"></div>
+</div>
+<br>
+<!--WEB WORKERS-->
+<p>Web workers example</p>
+<script>
+  function bigLoop() {
+     
+     for (var i = 0; i <= 100000; i += 1) {
+        var j = i;
+     }
+     alert("Completed " + j + " iterations and now you're removing ths section" );
+  }
+  
+  function sayHello(){
+     alert("You're removing this section" );
+  }
+</script>
+
+
+<input type = "button" onclick = "bigLoop();" class="ww" value = "Big Loop" />
+<input type = "button" onclick = "sayHello();" class="ww" value = "Remove section" />
+<br><br>
+<!--Jquery callback-->
+<button id="callback_hide">Hide</button>
+
+<div id="div_endi">
+<p>This is a paragraph with little content.</p></div>
+
+  </body>
+</html>

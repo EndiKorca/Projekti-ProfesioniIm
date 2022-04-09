@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+ .stars{
+    height: 150px;
+    width: 500px;
+  }
+  .stars input[type = "radio"]{
+    display: none;
+  }
+  .stars label{
+    float: right;
+    font-size: 50px;
+    color: lightgrey;
+    margin: 0 5px;
+    text-shadow: 1px 1px #bbb;
+  }
+  .stars label:before{
+    content: '★';
+  }
+  .stars input:checked ~ label{
+    color: gold;
+    text-shadow: 1px 1px #c60;
+  }
+  .stars:not(:checked) > label:hover,
+  .stars:not(:checked) > label:hover ~ label{
+    color: gold;
+  }
+  .stars input:checked > label:hover,
+  .stars input:checked > label:hover ~ label{
+    color: gold;
+    text-shadow: 1px 1px goldenrod;
+  }
+  .stars .result:before{
+    font-size: 20px;
+    font-weight: 250;
+    color: gold;
+    font-family: 'Poppins', sans-serif;
+    display: none;
+  }
+  .stars input:checked ~ .result:before{
+    display: inline-flex;
+  }
+  .stars #five:checked ~ .result:before{
+    content: "I love it 😍";
+  }
+  .stars #four:checked ~ .result:before{
+    content: "I like it 😀";
+  }
+  .stars #three:checked ~ .result:before{
+    content: "It's good 😐";
+  }
+  .stars #two:checked ~ .result:before{
+    content: "I don't like it 😟";
+  }
+  .stars #one:checked ~ .result:before{
+    content: "I hate it 😡";
+  }

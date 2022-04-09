@@ -1,0 +1,13 @@
+
+ 
+ body {
+    
+    margin: 0;
+    font-family: Poppins, Helvetica, sans-serif;
+    overflow-x:hidden;
+    background-size: 15px!important;
+    background: url("Imazhet/bg-dot.png") repeat 100%;
+    background-attachment: fixed;
+  }
+   
+    
